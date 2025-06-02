@@ -79,14 +79,14 @@ const LandingPage = () => {
                 We blend creativity, strategy, and technology to craft digital experiences that drive real-world results. Here’s a glimpse into what we do best:
               </p>
               <ul className="grid-list">
-                {[{"title": "Landing Page"}, {"title": "Digital marketing"}, {"title": "Video Editing"}].map((item, i) => (
+                {[{"title": "Landing Page","disc":"Build modern, responsive landing pages tailored to your brand. From sleek UI to optimized UX, I ensure your page loads fast, looks professional, and converts visitors into customers. Whether you're launching a product, service, or portfolio — I’ve got you covered."}, {"title": "Digital marketing","disc":"Amplify your brand online with strategic digital marketing. I offer tailored social media campaigns, ad creatives, and audience targeting across platforms like Instagram, Facebook, and Twitter — designed to boost your reach and engagement."}, {"title": "Video Editing","disc":"Bring your vision to life with professional video editing. From trimming and transitions to color correction and effects, I craft compelling videos for YouTube, social media, ads, and more — all edited with attention to detail and story flow."}].map((item, i) => (
                   <li key={item.title}>
                     <div className="work-card">
                       <figure className="card-banner img-holder" style={{ '--width': 580, '--height': 620 }}>
-                        <img src={` work-${i + 1}.${(i === 0) ? 'png' : 'jpg'}`} width="580" height="620" loading="lazy" alt={item.title} className="img-cover" />
+                        <img src={` work-${i + 1}.jpg`} width="580" height="620" loading="lazy" alt={item.title} className="img-cover" />
                       </figure>
                       <h3 className="h3 card-title">{item.title}</h3>
-                      <p className="card-text">Use this section to describe your work</p>
+                      <p className="card-text">{item.disc}</p>
                     </div>
                   </li>
                 ))}
